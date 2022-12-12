@@ -1,0 +1,51 @@
+# mount point     fstype    device                              flags
+/metadata                 ext4               /dev/block/platform/bootdevice/by-name/md_udc   flags=display="Metadata"
+/tranfs                   ext4               /dev/block/platform/bootdevice/by-name/tranfs
+/persistent               emmc               /dev/block/platform/bootdevice/by-name/frp 
+/nvram                    emmc               /dev/block/platform/bootdevice/by-name/nvram 
+/proinfo                  emmc               /dev/block/platform/bootdevice/by-name/proinfo 
+/bootloader               emmc               /dev/block/platform/bootdevice/by-name/lk           flags=display="lk";backup=1;flashimg
+/bootloader2              emmc               /dev/block/platform/bootdevice/by-name/lk2          flags=backup=1 
+/boot                     emmc               /dev/block/platform/bootdevice/by-name/boot   flags=display="boot";flashimg=1;backup=1;slotselect
+/para                     emmc               /dev/block/platform/bootdevice/by-name/para  
+/vbmeta_vendor            emmc               /dev/block/platform/bootdevice/by-name/vbmeta_vendor             flags=slotselect;backup=1;flashimg=1
+/vbmeta_system            emmc               /dev/block/platform/bootdevice/by-name/vbmeta_system            flags=slotselect;backup=1;flashimg=1
+/logo                     emmc               /dev/block/platform/bootdevice/by-name/logo 
+/expdb                    emmc               /dev/block/platform/bootdevice/by-name/expdb 
+/seccfg                   emmc               /dev/block/platform/bootdevice/by-name/seccfg 
+/tee1                     emmc               /dev/block/platform/bootdevice/by-name/tee1 
+/tee2                     emmc               /dev/block/platform/bootdevice/by-name/tee2 
+/scp1                     emmc               /dev/block/platform/bootdevice/by-name/scp1 
+/scp2                     emmc               /dev/block/platform/bootdevice/by-name/scp2 
+/sspm_1                   emmc               /dev/block/platform/bootdevice/by-name/sspm_1 
+/sspm_2                   emmc               /dev/block/platform/bootdevice/by-name/sspm_2 
+/md1img                   emmc               /dev/block/platform/bootdevice/by-name/md1img 
+/md1dsp                   emmc               /dev/block/platform/bootdevice/by-name/md1dsp 
+/cam_vpu1                 emmc               /dev/block/platform/bootdevice/by-name/cam_vpu1 
+/cam_vpu2                 emmc               /dev/block/platform/bootdevice/by-name/cam_vpu2 
+/cam_vpu3                 emmc               /dev/block/platform/bootdevice/by-name/cam_vpu3 
+/gz1                      emmc               /dev/block/platform/bootdevice/by-name/gz1 
+/gz2                      emmc               /dev/block/platform/bootdevice/by-name/gz2 
+/spmfw                    emmc               /dev/block/platform/bootdevice/by-name/spmfw 
+/boot_para                emmc               /dev/block/platform/bootdevice/by-name/boot_para    flags=backup=1
+/dtbo                     emmc               /dev/block/platform/bootdevice/by-name/dtbo    flags=backup=1
+/otp                      emmc               /dev/block/platform/bootdevice/by-name/otp 
+/vbmeta                   emmc               /dev/block/platform/bootdevice/by-name/vbmeta     flags=backup=1
+/tkv                      emmc               /dev/block/platform/bootdevice/by-name/tkv
+#Super partitions mount
+/system_root      ext4   /dev/block/mapper/system                flags=backup=0;removable;slotselect
+/system_ext       ext4   /dev/block/mapper/system_ext            flags=backup=0;removable;slotselect
+/vendor           ext4   /dev/block/mapper/vendor                flags=backup=0;removable;slotselect
+/product          ext4   /dev/block/mapper/product               flags=backup=0;removable;slotselect
+/system_wipe      ext4   /dev/block/mapper/system                flags=display="System (wipeable)";backup=1;wipeingui;slotselect
+/system_ext_wipe  ext4   /dev/block/mapper/system_ext            flags=display="System_ext (wipeable)";backup=1;wipeingui;slotselect
+/product_wipe     ext4   /dev/block/mapper/product               flags=display="Product (wipeable)";backup=1;wipeingui;slotselect
+/vendor_wipe      ext4   /dev/block/mapper/vendor                flags=display="Vendor (wipeable)";backup=1;wipeingui;slotselect
+/system_img       emmc   /dev/block/mapper/system                flags=display="System image";backup=1;flashimg;slotselect
+/system_ext_img   emmc   /dev/block/mapper/system_ext            flags=display="System_ext image";backup=1;flashimg;slotselect
+/vendor_img       emmc   /dev/block/mapper/vendor                flags=display="Vendor image";backup=1;flashimg;slotselect
+/product_img      emmc   /dev/block/mapper/product               flags=display="Product image";backup=1;flashimg;slotselect 
+
+# Removable Storage
+/external_sd    auto     /dev/block/mmcblk1p1  /dev/block/mmcblk1    flags=display="External_SDcard";storage;wipeingui;removable;fsflags="utf8"
+/usb_otg        auto     /dev/block/sda1      /dev/block/sda         flags=display="USB OTG";storage;wipeingui;removable;fsflags="utf8"
