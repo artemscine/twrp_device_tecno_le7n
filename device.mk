@@ -28,7 +28,6 @@ AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     lk \
-    preloader \
     product \
     system \
     system_ext \
@@ -79,8 +78,7 @@ PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
     update_engine \
-    update_verifier \
-    update_engine_sideload
+    update_verifier 
 
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
