@@ -46,7 +46,7 @@ TW_EXTRA_LANGUAGES := false
 TW_OEM_BUILD := false
 
 #Copyright
-TW_DEVICE_VERSION := ru-by-artemscine
+TW_DEVICE_VERSION := by-artemscine
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := TECNO_LE7n
