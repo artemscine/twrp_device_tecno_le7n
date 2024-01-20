@@ -24,18 +24,15 @@ ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # A/B
+AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
-    boot \
-    dtbo \
-    lk \
-    product \
     system \
-    system_ext \
-    vbmeta \
-    vbmeta_system \
-    vbmeta_vendor \
     vendor \
-    vendor_boot
+    product \
+    system_ext \
+    boot \
+    vbmeta_vendor \
+    vbmeta_system
     
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
