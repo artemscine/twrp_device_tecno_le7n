@@ -29,6 +29,7 @@
 /otp                      emmc               /dev/block/platform/bootdevice/by-name/otp 
 /vbmeta                   emmc               /dev/block/platform/bootdevice/by-name/vbmeta            flags=backup=1
 /tkv                      emmc               /dev/block/platform/bootdevice/by-name/tkv
+
 # Super partitions mount
 /system_root      ext4   /dev/block/mapper/system                flags=backup=0;removable;slotselect
 /system_ext       ext4   /dev/block/mapper/system_ext            flags=backup=0;removable;slotselect
@@ -40,13 +41,8 @@
 /product_img      emmc   /dev/block/mapper/product               flags=display="Product image";backup=1;flashimg;slotselect 
 
 # Other
-/protect_f                ext4      /dev/block/by-name/protect1                            flags=display=protect_f;backup=1
-/protect_s                ext4      /dev/block/by-name/protect2                            flags=display=protect_s;backup=1
-/nvdata                   ext4      /dev/block/by-name/nvdata                              flags=display=nvdata;backup=1
-/nvcfg                    ext4      /dev/block/by-name/nvcfg                               flags=display=nvcfg;backup=1
-/persist                  ext4      /dev/block/by-name/persist                             flags=display=Persist;backup=1
 /persistent               emmc      /dev/block/by-name/frp                                 flags=display=frp;backup=1
-/nvram                    emmc      /dev/block/by-name/nvram                               flags=display=nvram;backup=1
+/nvram                    emmc      /dev/block/by-name/nvram                               
 /tranfs                   ext4      /dev/block/by-name/tranfs                              
 
 
