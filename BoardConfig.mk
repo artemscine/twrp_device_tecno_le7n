@@ -41,12 +41,12 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
-#Reduce Size
+# Reduce Size
 TW_EXTRA_LANGUAGES := false
 TW_OEM_BUILD := false
 
-#Copyright
-TW_DEVICE_VERSION := by-artemscine
+# Copyright
+TW_DEVICE_VERSION := by-@artemscine
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := TECNO_LE7n
@@ -127,8 +127,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Filesystem
-BOARD_ROOT_EXTRA_FOLDERS += metadata
-BOARD_ROOT_EXTRA_FOLDERS += tranfs
+BOARD_ROOT_EXTRA_FOLDERS += metadata tranfs
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -153,11 +152,11 @@ TW_HAS_MTP := true
 TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_INCLUDE_REPACKTOOLS := true
 TARGET_USES_MKE2FS := true
-TW_EXCLUDE_TWRPAPP := true
 TW_NO_TWRPAPP := true
 TWRP_INCLUDE_LOGCAT := true
-#TW_NO_SCREEN_TIMEOUT := true
+TW_NO_SCREEN_TIMEOUT := true
 TARGET_USES_LOGD := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -165,7 +164,6 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_INCLUDE_REPACKTOOLS := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
